@@ -1,0 +1,10 @@
+fastapi==0.71.0
+itsdangerous
+sqlalchemy
+python-multipart
+requests
+werkzeug==2.0.2
+
+# for testing: 
+pytest
+coverage
