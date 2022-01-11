@@ -1,0 +1,6 @@
+venv
+*.pyc
+*.db
+coverage
+setup.ctg
+
