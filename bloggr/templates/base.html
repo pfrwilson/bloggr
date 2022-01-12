@@ -1,15 +1,15 @@
 <!doctype html>
-<title>{% block title %}{% endblock %} - Flaskr</title>
-<link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+<title>{% block title %}{% endblock %} - Bloggr</title>
+<link rel="stylesheet" href="{{ url_for('static', path='/style.css/?query=1') }}">
 <nav>
-  <h1>Flaskr</h1>
+  <h1>Bloggr</h1>
   <ul>
-    {% if request.state.user %}
-      <li><span>{{ request.state.user }}</span>
+    {% if request.session['user'] %}
+      <li><span>{{ request.session['user'] }}</span>
       <li><a href="{{ url_for('logout') }}">Log Out</a>
     {% else %}
       <li><a href="{{ url_for('register') }}">Register</a>
-      <li><a href="{{ url_for('login') }}">Log In</a>
+      <li><a href="{{ url_for('login') }}">Login</a>
     {% endif %}
   </ul>
 </nav>
@@ -17,7 +17,7 @@
   <header>
     {% block header %}{% endblock %}
   </header>
-  {% for message in request.flash %}
+  {% for message in request.state.flash %}
     <div class="flash">{{ message }}</div>
   {% endfor %}
   {% block content %}{% endblock %}

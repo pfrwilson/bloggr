@@ -1,5 +1,4 @@
 
-
 html {
     font-family: sans-serif;
     background: white;
@@ -9,34 +8,44 @@ html {
   body {
     max-width: 400px;
     margin: 0 auto;
-    background: white;
+    background: #CDD7D6;
+    border: 1px solid;
+    border-radius: 5px
   }
   
   h1, h2, h3, h4, h5, h6 {
-    font-family: calibri;
-    color: #377ba8;
-    margin: 1rem 0;
-  }
+    font-family: sans-serif;
+    color: #102542;
+    margin: 1px 0;
+    }
   
   a {
-    color: #377ba8;
+    color: white;
+  }
+  a:hover{
+    color: #F87060;
   }
   
+
+
   hr {
     border: none;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid black;
   }
   
   nav {
-    background: rgb(70, 14, 14);
+    background: #102542;
     display: flex;
     align-items: center;
     padding: 0 0.5rem;
+    border: 1px solid
   }
   
   nav h1 {
     flex: auto;
     margin: 0;
+    color: white;
+    text-shadow: 2px 2px #F87060;
   }
   
   nav h1 a {
@@ -55,13 +64,13 @@ html {
     display: block;
     padding: 0.5rem;
   }
-  
+
   .content {
     padding: 0 1rem 1rem;
   }
   
   .content > header {
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid #102542;
     display: flex;
     align-items: flex-end;
   }
@@ -74,8 +83,11 @@ html {
   .flash {
     margin: 1em 0;
     padding: 1em;
-    background: #cae6f6;
-    border: 1px solid #377ba8;
+    background: white;
+    box-shadow: 5px 5px #F87060;
+    border: 1px solid #102542;
+    border-radius: 3px;
+    color: 102542;
   }
   
   .post > header {
@@ -115,10 +127,14 @@ html {
   .content label {
     font-weight: bold;
     margin-bottom: 0.5em;
+    color: #102542;
   }
   
   .content input, .content textarea {
     margin-bottom: 1em;
+    border: 1px solid #102542 !important;
+    border-radius: 500px;
+    text-align: center;
   }
   
   .content textarea {
@@ -131,6 +147,13 @@ html {
   }
   
   input[type=submit] {
-    align-self: start;
-    min-width: 10em;
+  align-self: start;
+  min-width: 10em;
+  background-color: #102542;
+  color: white;
+  }
+
+  input[type=submit]:hover{
+  color: #F87060;
+  box-shadow: 2px 2px #F87060;
   }
