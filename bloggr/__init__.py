@@ -21,7 +21,8 @@ def get_app(config: dict | None = None):
     app.mount('/static', StaticFiles(directory=os.path.join(APP_DIR, 'static')), name='static')
 
     app.include_router(auth.router)
-
+    app.include_router(blog.router)
+    
     return app
 
 
